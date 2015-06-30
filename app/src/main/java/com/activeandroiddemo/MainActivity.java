@@ -112,7 +112,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 for(int i=0;i<list.length();i++){
 
-                    WeatherDetailsTable weatherDetailsTable = new WeatherDetailsTable();
+                    WeatherDetailsTable weatherDetailsTable = new WeatherDetailsTable(); // creating new row 
 
                     weatherDetailsTable._cityID = cityID;
                     weatherDetailsTable._cityName = cityName;
@@ -128,7 +128,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         weatherDetailsTable._mainWeather = weatherDetailsArray.getJSONObject(j).optString("main");
                         weatherDetailsTable._desc = weatherDetailsArray.getJSONObject(j).optString("description");
                     }
-                    weatherDetailsTable.save();
+                    weatherDetailsTable.save(); // saving the data 
                     displayData();
                 }
 
